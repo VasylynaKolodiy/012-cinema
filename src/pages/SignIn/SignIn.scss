@@ -1,0 +1,64 @@
+.signin {
+  &__container {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__form {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+  &-input {
+    position: relative;
+    width: 100%;
+  }
+  .inputWrapper {
+    width: 100%;
+  }
+
+  &-password-eye {
+    position: absolute;
+    right: 0;
+    bottom: 25px;
+    cursor: pointer;
+
+    &:hover {
+      .signin-password-imageEye {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-password-imageEye {
+    width: 30px;
+    height: 30px;
+    transition: .3s linear;
+    opacity: .5;
+  }
+
+  &__error{
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    color: red;
+    font-size: 12px;
+    &::before{
+      content: url("../../assets/img/error.png");
+      padding-right: 5px;
+      text-align: center;
+    }
+  }
+}
+
+@media(max-width: 750px) {
+  .signin__form {
+    width: 90%;
+  }
+}

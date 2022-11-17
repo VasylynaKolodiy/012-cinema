@@ -1,0 +1,38 @@
+.comment {
+  margin-top: 50px;
+  width: 100%;
+  margin-bottom: 50px;
+
+  &__content{
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  &__title {
+    margin: 20px 0 20px 0;
+  }
+
+  &__top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+
+  &__rating {
+    background: url("../../assets/img/star.png") top center no-repeat;
+    background-size: cover;
+    padding: 10px;
+  }
+
+  &__body {
+    margin-bottom: 20px;
+  }
+
+  &__date {
+    color: gray;
+  }
+
+}

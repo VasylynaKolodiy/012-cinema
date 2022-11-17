@@ -1,0 +1,51 @@
+//id = "footer-email"
+//placeholder = "Your email address"
+//type = "text" / "email" / "tel"
+//length = "large" / "default" / "small"
+//color = "light" / "dark"
+//label = "Email:"
+
+.inputWrapper{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+label{
+  margin-top: 20px;
+}
+
+.input{
+  all: unset;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
+  padding: 13px 16px;
+  width: 100%;
+  height: 22px;
+  background: rgba(black, 0.3);
+  color: gray;
+  border-radius: 10px;
+  outline: none;
+  & + label {
+    color: black;
+    margin-bottom: 10px;
+  }
+
+  &:focus{
+    background: #FFFFFF;
+    box-shadow: 0 80px 80px -20px rgba(255, 255, 255, 0.08), 0px 30px 24px -10px rgba(255, 90, 48, 0.05), 0px 12px 10px -6px rgba(255, 90, 48, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+  }
+  &:read-only, &:disabled{
+    background: lightgrey;
+    color: gray;
+  }
+  &:not(:placeholder-shown) {
+    color: black;
+    background: #FFFFFF;
+  }
+
+}
+
+
+

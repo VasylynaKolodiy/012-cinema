@@ -1,0 +1,23 @@
+#mybutton{
+  border-radius: 10px;
+  background-color: rgba(black, 0.5);
+  padding: 10px 15px;
+  text-align: center;
+  align-self: center;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
+  transition: .3s linear;
+  border: none;
+  cursor: pointer;
+  text-shadow: 2px 2px 5px black;
+  display: inline-block;
+  margin: 30px 5px;
+  &:hover {
+    background-color: rgba(red, 0.5);
+  }
+  &.active{
+    background-color: rgba(red, 0.5);
+  }
+}

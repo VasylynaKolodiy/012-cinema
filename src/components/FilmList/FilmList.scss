@@ -1,0 +1,20 @@
+.film{
+  &__list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px 10px;
+  }
+}
+
+
+@media(max-width: 900px) {
+  .film__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 700px) {
+  .film__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

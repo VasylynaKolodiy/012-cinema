@@ -1,0 +1,142 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 5;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 50px;
+  }
+
+  &__menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+  }
+
+  &__menu-item {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &:hover {
+      .header__menu-item-link.exit {
+        opacity: 1;
+      }
+    }
+  }
+
+
+  &__menu-item-link.exit {
+    opacity: 0;
+    transition: .3s linear;
+    position: absolute;
+    bottom: -40px;
+    right: 65px;
+    text-transform: uppercase;
+    color: black;
+  }
+
+  &__logo-image {
+    width: 90px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  a {
+    transition: .3s linear;
+    color: black;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+
+  &__hiddenmenu-list {
+    display: none;
+    position: absolute;
+    top: 100px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 85%;
+    border-radius: 10px;
+    height: 60vh;
+    padding: 40px 20px;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
+  }
+
+  &__hiddenmenu-list.active {
+    display: flex;
+    html{
+      overflow: hidden;
+    }
+  }
+  &__hiddenmenu{
+    width: 30px;
+    height: 30px;
+    display: none;
+
+  }
+
+
+  &__hiddenmenu-image{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: .3s linear;
+  }
+
+  &__hiddenmenu-item {
+    width: 90%;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 5px 15px 0;
+    border-radius: 10px;
+    text-align: center;
+    &:hover{
+      background-color: rgba(red, 0.5);
+    }
+  }
+
+}
+
+@media(max-width: 750px) {
+  .header__menu-list {
+    gap: 15px;
+  }
+
+
+  .header__menu-item{
+    display: none;
+  }
+  .header__hiddenmenu{
+    display: flex;
+    cursor: pointer;
+  }
+
+}
+
+@media(max-width: 600px) {
+  .header__logo-image {
+    width: 70px;
+  }
+}
+
+@media(max-width: 450px) {
+  .header__container {
+    padding: 5px 10px;
+  }
+}

@@ -1,0 +1,30 @@
+.tabs {
+  margin-top: 80px;
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+@media(max-width: 998px) {
+    .tabs__list {
+      gap: 10px;
+  }
+}
+
+@media(max-width: 930px) {
+  .tabs__list-item{
+    #mybutton {
+      margin: 0;
+    }
+  }
+}
+
+@media(max-width: 700px) {
+  .tabs__list {
+    justify-content: center;
+  }
+}

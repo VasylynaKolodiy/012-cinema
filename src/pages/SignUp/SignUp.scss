@@ -1,0 +1,70 @@
+.signup {
+  &__container {
+    margin-top: 100px;
+  }
+
+  &__form {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+  }
+
+  .inputWrapper {
+    width: 100%;
+  }
+
+  &-password-eye {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    cursor: pointer;
+
+    &:hover {
+      .signup-password-imageEye {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-input {
+    width: 90%;
+    position: relative;
+  }
+
+  &-password-imageEye {
+    width: 30px;
+    height: 30px;
+    transition: .3s linear;
+    opacity: .5;
+  }
+
+  &__error {
+    position: absolute;
+    bottom: -35px;
+    left: 20px;
+    color: red;
+    font-size: 12px;
+
+    &::before {
+      content: url("../../assets/img/error.png");
+      padding-right: 5px;
+      text-align: center;
+    }
+  }
+
+  #mybutton {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media(max-width: 750px) {
+  .signup__form {
+    display: block;
+  }
+}
