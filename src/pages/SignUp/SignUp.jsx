@@ -90,10 +90,7 @@ const SignUp = () => {
           </div>
 
 
-
-
           <div>
-
             <div className="signup-input">
               <MyInput
                 id="signup-password"
@@ -118,9 +115,6 @@ const SignUp = () => {
               )}
 
             </div>
-
-
-
 
             <div className="signup-input">
               <MyInput

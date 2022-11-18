@@ -9,8 +9,6 @@ import axios from "axios";
 import {useNavigate} from "react-router";
 
 const SignIn = () => {
-  const user = localStorage.getItem('user');
-
   let [systemError, setSystemError] = useState('');
 
   const {
@@ -51,8 +49,8 @@ const SignIn = () => {
               register={register("email", {required: true, minLength: 4, maxLength: 100})}
             />
 
-            {errors?.email?.type === "maxLength" && (
-              <p className='signin__error'>Login cannot exceed 100 characters</p>
+            {(errors?.email?.type === "maxLength" || errors?.email?.type === "minLength" ) && (
+              <p className='signin__error'>Login must have from 4 to 100 characters</p>
             )}
 
             {errors?.Login?.type === "minLength" && (
@@ -72,6 +70,9 @@ const SignIn = () => {
               register={register("password", {required: true, maxLength: 10, minLength: 8})}
             />
 
+            {(errors?.password?.type === "minLength" || errors?.password?.type === "maxLength") && (
+              <p className='signin__error' >Password must have from 8 to 10 characters</p>
+            )}
 
             <div className="signin-password-eye" onClick={() => changePasswordEye()}>
               <img className="signin-password-imageEye"
